@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <main id="main" class="main">
-    
+
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
@@ -84,6 +84,7 @@
                                             <th scope="col">Nama Produk</th>
                                             <th scope="col">Jumlah</th>
                                             <th scope="col">Total</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -126,7 +127,8 @@
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" value="<?= number_format($totalHarga, 0, ',', '.'); ?>">
+                                    <input type="text" class="form-control"
+                                        value="<?= number_format($totalHarga, 0, ',', '.'); ?>">
                                     <label for="txtTotal">Total</label>
                                 </div>
                             </div>

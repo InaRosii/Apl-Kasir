@@ -8,7 +8,7 @@
         <h1>Data Kategori Produk</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="<?= site_url('dashboard-admin'); ?>">Dashboard</a></li>
                 <li class="breadcrumb-item">Master Data</li>
                 <li class="breadcrumb-item active">Kategori Produk</li>
             </ol>

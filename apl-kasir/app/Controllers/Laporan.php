@@ -7,10 +7,10 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Laporan extends BaseController
 {
-    public function index()
-    {
-        //
-    }
+    // public function index()
+    // {
+    //     //
+    // }
 
     public function dataStok()
     {
@@ -27,4 +27,5 @@ class Laporan extends BaseController
         ];
         return view('laporan/laporan-penjualan', $data);
     }
+
 }

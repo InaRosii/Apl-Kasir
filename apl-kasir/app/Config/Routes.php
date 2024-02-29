@@ -53,8 +53,7 @@ $routes->get('/pembayaran','Penjualan::simpanPembayaran',['filter'=>'otentifikas
 
 
 $routes->get('/laporan', 'Laporan::dataStok');
-$routes->get('/pdf', 'PdfController::index');
 $routes->get('/pdf/generate', 'PdfController::generate');
 $routes->get('/penjualan', 'Laporan::dataPenjualan');
-$routes->get('/pdf-penjualan', 'PdfController::pdfPenjualan');
 $routes->get('/pdf/generate-penjualan', 'PdfController::generatePenjualan');
+

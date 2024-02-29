@@ -87,16 +87,25 @@ class Mproduk extends Model
     public function getStok()
     {
         $produk = new Mproduk();
-        $produk->select('tbl_produk.id_produk, tbl_produk.nama_produk, tbl_produk.harga_beli, tbl_produk.harga_jual, tbl_produk.stok');
+        $produk->select('tbl_produk.kode_produk, tbl_produk.id_produk, tbl_produk.nama_produk, tbl_produk.harga_beli, tbl_produk.harga_jual, tbl_produk.stok');
         $produk->orderBy('tbl_produk.stok', 'ASC');
         return $produk->findAll();
         // $produk->select*from tbl_barang where stok>0;
     }
 
-    public function getLaporanproduk()
+    public function getLaporanProduk()
     {
         $produk = new Mproduk;
         $queryProduk = $produk->query("CALL sp_lihat_laporan()")->getResult();
         return $queryProduk;
+    }
+
+    public function getStok0()
+    {
+        $produk = new Mproduk();
+        $produk->select('tbl_produk.kode_produk, tbl_produk.id_produk, tbl_produk.nama_produk, tbl_produk.harga_beli, tbl_produk.harga_jual, tbl_produk.stok');
+        $produk->where('tbl_produk.stok = 0');
+        return $produk->findAll();
+        // $produk->select*from tbl_barang where stok=0;
     }
 }

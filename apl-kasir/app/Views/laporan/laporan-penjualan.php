@@ -4,7 +4,7 @@
 
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Laporan Stok Barang</h1>
+        <h1>Laporan Penjualan</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -22,7 +22,7 @@
                     <div class="card-body">
                         <div class="row mt-3">
                             <div class="col-md-2">
-                                <a class="btn btn-danger" aria-current="true" href="<?= site_url('/pdf-penjualan') ?>">
+                                <a class="btn btn-danger" aria-current="true" href="<?= site_url('pdf/generate-penjualan') ?>">
 
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus-circle"></i>

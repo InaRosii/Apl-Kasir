@@ -89,4 +89,10 @@ class Penjualan extends BaseController
         // Mengarahkan pengguna kembali ke halaman transaksi penjualan
         return redirect()->to('transaksi-penjualan');
     }
+
+    public function delete($id)
+    {
+        $this->detail->delete($id);
+        return redirect()->to('/')->with('pesan', 'Data berhasil dihapus.');
+    }
 }

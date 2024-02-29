@@ -1,58 +1,59 @@
-<!DOCTYPE <html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Download PDf Laporan</title>
+    <title>Laporan Stok</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Data Laporan Stok </h2>
-    <a href="<?php echo site_url('pdf/generate') ?>">
-        <button type="button" class="btn btn-danger">download</button>
-    </a>
-    <table border=1 width=80% cellpadding=2 cellspacing=0 style="margin-top: 5px; text-align:center">
+    <h1 style="text-align: center;">Laporan Stok Produk</h1>
+    <table>
         <thead>
-            <tr bgcolor=silver align=center>
-                <td width="5%">No</td>
-                <td width="25%">Nama Prokduk</td>
-                <td width="50%">Harga Jual</td>
-                <td width="50%">Harga Beli</td>
-                <td width="20%">Stok</td>
+            <tr>
+                <th>No</th>
+                <th>Nama Produk</th>
+                <th>Harga Beli</th>
+                <th>Harga Jual</th>
+                <th>Stok</th>
             </tr>
         </thead>
         <tbody>
-            <?php
-            if (isset($listProduk)):
-                $no = 0; // inisialisasi nomor
-                foreach ($listProduk as $baris):
-                    $no++;
-                    ?>
-                    <tr>
-                        <td>
-                            <?= $no ?>
-                        </td>
-                        <td>
-                            <?= $baris->nama_produk ?>
-                        </td>
-                        <td>
-                            <?= $baris->harga_beli ?>
-                        </td>
-                        <td>
-                            <?= $baris->harga_jual ?>
-                        </td>
-                        <td>
-                            <?= $baris->stok ?>
-                        </td>
-                    </tr>
-                    <?php
-                endforeach;
-            endif;
-            ?>
+            <?php $no = 1; ?>
+            <?php foreach ($listProduk as $baris): ?>
+                <tr>
+                    <td>
+                        <?= $no ?>
+                    </td>
+                    <td>
+                        <?= $baris->nama_produk ?>
+                    </td>
+                    <td>
+                        <?= $baris->harga_beli ?>
+                    </td>
+                    <td>
+                        <?= $baris->harga_jual ?>
+                    </td>
+                    <td>
+                        <?= $baris->stok ?>
+                    </td>
+                </tr>
 
+            <?php endforeach; ?>
         </tbody>
     </table>
 </body>

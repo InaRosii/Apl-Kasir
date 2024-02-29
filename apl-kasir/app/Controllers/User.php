@@ -11,7 +11,9 @@ class User extends BaseController
     {
         $data = [
             'akses' => session()->get('level'),
-            'pendapatan_harian' => $this->penjualan->getPendapatanHarian()
+            'pendapatan_harian' => $this->penjualan->getPendapatanHarian(),
+            'penjualan_harian' => $this->penjualan->getPenjualanHarian(),
+            'dataStok' => $this->produk->getStok0()
         ];
         return view('dashboard-admin', $data);
     }

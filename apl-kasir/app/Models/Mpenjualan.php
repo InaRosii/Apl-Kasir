@@ -83,9 +83,15 @@ class Mpenjualan extends Model
         }
     }
 
-    public function getPendapatanHarian(){
+    public function getPendapatanHarian()
+    {
         $today = date('Y-m-d');
         return $this->where('DATE(tanggal_penjualan)', $today)->select('SUM(total) AS pendapatan_harian')->get()->getRow()->pendapatan_harian;
+    }
+    public function getPenjualanHarian()
+    {
+        $today = date('Y-m-d');
+        return $this->where('DATE(tanggal_penjualan)', $today)->select('COUNT(id_penjualan) AS penjualan_harian')->get()->getRow()->penjualan_harian;
     }
 
     public function getLaporanPenjualan()

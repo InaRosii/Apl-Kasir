@@ -22,7 +22,7 @@
                     <div class="card-body">
                         <div class="row mt-3">
                             <div class="col-md-2">
-                                <a class="btn btn-danger" aria-current="true" href="<?= site_url('/pdf') ?>">
+                                <a class="btn btn-danger" aria-current="true" href="<?= site_url('pdf/generate') ?>">
 
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus-circle"></i>
