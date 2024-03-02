@@ -60,17 +60,6 @@
     </li><!-- End Pengguna Page Nav -->
     <?php endif; ?>
 
-    <?php if (session()->get('level') == 'Admin'): ?>
-    <li class="nav-heading">Transaksi</li>
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="<?= site_url('transaksi-penjualan'); ?>">
-        <i class="bi bi-basket"></i>
-        <span>Penjualan</span>
-      </a>
-    </li><!-- End Kategori Page Nav -->
-    <?php endif; ?>
-
     <?php if (session()->get('level') == 'Kasir'): ?>
     <li class="nav-heading">Transaksi</li>
 

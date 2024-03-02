@@ -4,7 +4,7 @@
   <div class="d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <span class="bi bi-linkedin d-none d-lg-block">aMart</span>
+      <span class="bi bi-linkedin d-none d-lg-block">Mart</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
@@ -38,7 +38,7 @@
           <li>
             <a class="dropdown-item d-flex align-items-center" href="<?= site_url('profile'); ?>">
               <i class="bi bi-person"></i>
-              <span>My Profile</span>
+              <span>Profile</span>
             </a>
           </li>
 
@@ -49,7 +49,7 @@
           <li>
           <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
               <i class="bi bi-box-arrow-right fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-              <span>Sign Out</span>
+              <span>Logout</span>
             </a>
           </li>
 

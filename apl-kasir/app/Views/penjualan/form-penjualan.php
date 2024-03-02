@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="card-footer text-end">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Beli</button>
                                 <!-- <a type="reset" class="btn btn-secondary">Reset</a> -->
                             </div>
                         </form><!-- End floating Labels Form -->
@@ -150,7 +150,7 @@
                             Simpan
                         </a> -->
                         <button id="btnBayar" type="submit" class="btn btn-primary"
-                            onclick="redirectToRoute()">Bayar</button>
+                            onclick="redirectToRoute()">Selesai</button>
                     </div>
 
                 </div>

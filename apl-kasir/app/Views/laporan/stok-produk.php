@@ -19,9 +19,9 @@
             <div class="col-lg-12">
 
                 <div class="card">
-                    <div class="card-body">
-                        <div class="row mt-3">
-                            <div class="col-md-2">
+                    <div class="card-body mt-4">
+                        <div class="row">
+                            <div class="col md-2">
                                 <a class="btn btn-danger" aria-current="true" href="<?= site_url('pdf/generate') ?>">
 
                                     <span class="icon text-white-50">

@@ -11,7 +11,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title text-center">
-              <span class="bi bi-linkedin d-none d-lg-block">aMart</span>
+              <span class="bi bi-linkedin d-none d-lg-block">Mart</span>
             </h5>
 
             <?php if (session()->getFlashdata('errors')): ?>
