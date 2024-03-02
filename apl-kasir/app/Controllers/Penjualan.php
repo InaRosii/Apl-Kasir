@@ -10,14 +10,14 @@ class Penjualan extends BaseController
     public function index()
     {
         $no_faktur = $this->penjualan->generateTransactionNumber();
-       
-        $data=[
-            'noFaktur'=>$no_faktur,
-            'produkList'=> $this->produk->getAllProduk(),
+
+        $data = [
+            'noFaktur' => $no_faktur,
+            'produkList' => $this->produk->getAllProduk(),
             'detailPenjualan' => $this->detail->getDetailPenjualan(session()->get('IdPenjualan')),
-            'totalHarga' =>$this->penjualan->getTotalHargaById(session()->get('IdPenjualan')),
+            'totalHarga' => $this->penjualan->getTotalHargaById(session()->get('IdPenjualan')),
         ];
-        return view('penjualan/form-penjualan',$data);
+        return view('penjualan/form-penjualan', $data);
     }
 
     public function simpanPenjualan()
@@ -90,9 +90,4 @@ class Penjualan extends BaseController
         return redirect()->to('transaksi-penjualan');
     }
 
-    public function delete($id)
-    {
-        $this->detail->delete($id);
-        return redirect()->to('/')->with('pesan', 'Data berhasil dihapus.');
-    }
 }

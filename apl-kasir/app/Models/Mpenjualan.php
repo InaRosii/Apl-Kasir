@@ -94,21 +94,21 @@ class Mpenjualan extends Model
         return $this->where('DATE(tanggal_penjualan)', $today)->select('COUNT(id_penjualan) AS penjualan_harian')->get()->getRow()->penjualan_harian;
     }
 
-    public function getLaporanPenjualan()
-    {
-        $penjualan = new Mpenjualan();
-        $penjualan->select('tbl_penjualan.id_penjualan, tbl_penjualan.no_faktur, tbl_penjualan.tanggal_penjualan, tbl_penjualan.total');
-        $penjualan->orderBy('tbl_penjualan.tanggal_penjualan', 'DESC');
+    // public function getLaporanPenjualan()
+    // {
+    //     $penjualan = new Mpenjualan();
+    //     $penjualan->select('tbl_penjualan.id_penjualan, tbl_penjualan.no_faktur, tbl_penjualan.tanggal_penjualan, tbl_penjualan.total');
+    //     $penjualan->orderBy('MONTH(tanggal_penjualan)');
 
-        return $penjualan->findAll();
-    }
+    //     return $penjualan->findAll();
+    // }
 
-    public function getPdfPenjualan()
-    {
-        $penjualan = new Mpenjualan;
-        $queryPenjualan = $penjualan->query("CALL sp_lihat_laporan_penjualan()")->getResult();
-        return $queryPenjualan;
-    }
+    // public function getPdfPenjualan()
+    // {
+    //     $penjualan = new Mpenjualan;
+    //     $queryPenjualan = $penjualan->query("CALL sp_lihat_laporan_penjualan()")->getResult();
+    //     return $queryPenjualan;
+    // }
 
 
 }

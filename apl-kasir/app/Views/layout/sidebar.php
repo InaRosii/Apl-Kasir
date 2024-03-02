@@ -93,12 +93,12 @@
     </li><!-- End Login Page Nav -->
     <?php endif; ?>
 
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="<?= site_url('penjualan'); ?>">
+    <!-- <li class="nav-item">
+      <a class="nav-link collapsed" href=" ">
         <i class="bi bi-graph-up"></i>
         <span>Penjualan</span>
       </a>
-    </li>
+    </li> -->
 
   </ul>
 

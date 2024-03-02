@@ -5,7 +5,9 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Selamat Datang <?= session()->get('nama_user'); ?></h1>
+    <h1>Selamat Datang
+      <?= session()->get('nama_user'); ?>
+    </h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</a></li>
@@ -63,7 +65,7 @@
           <div class="col-12">
             <div class="card recent-sales overflow-auto">
               <div class="card-body">
-                <h5 class="card-title">Daftar Produk</h5>
+                <h5 class="card-title">Daftar Produk Habis</h5>
                 <table class="table table-borderless datatable">
                   <thead>
                     <tr>

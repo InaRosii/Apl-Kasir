@@ -84,7 +84,6 @@
                                             <th scope="col">Nama Produk</th>
                                             <th scope="col">Jumlah</th>
                                             <th scope="col">Total</th>
-                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -147,9 +146,11 @@
                         </div>
                     </div>
                     <div class="card-footer text-end">
-                        <a href="<?= site_url('pembayaran') ?>" class="btn btn-primary">
+                        <!-- <a href="" class="btn btn-primary">
                             Simpan
-                        </a>
+                        </a> -->
+                        <button id="btnBayar" type="submit" class="btn btn-primary"
+                            onclick="redirectToRoute()">Bayar</button>
                     </div>
 
                 </div>
@@ -159,27 +160,40 @@
 </main><!-- End #main -->
 
 <script>
+
+    function redirectToRoute() {
+        window.location.href = '<?= site_url('pembayaran'); ?>'
+    }
+
+</script>
+
+<script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Ambil elemen-elemen yang diperlukan
         var txtBayar = document.getElementById('txtbayar');
+        var btnBayar = document.getElementById('btnBayar');
         var kembali = document.getElementById('kembali');
         var totalHarga = <?= $totalHarga ?>; // Ambil total harga dari controller dan diteruskan ke view
 
-        // Tambahkan event listener untuk memantau perubahan pada input bayar
+        btnBayar.disabled = true;
+        // tambahkan event listener untuk memantau perubahan pada input bayar
         txtBayar.addEventListener('input', function () {
-            // Ambil nilai yang dibayarkan
+            // ambil nilai yang dibayarkan
             var bayar = parseFloat(txtBayar.value);
 
-            // Hitung kembaliannya
             var kembalian = bayar - totalHarga;
 
-            // Tampilkan kembaliannya pada input kembali
+            // tampilkan kembaliannya pada input kembali
             if (kembalian >= 0) {
-                kembali.value = kembalian.toFixed(2).replace(/(\.00)+$/, ''); // Menampilkan hingga 2 digit desimal
+                kembali.value = kembalian.toFixed(2).replace(/(\.00)+$/, ''); // menampilkan hingga 2 digit desimal
+                btnBayar.disabled = false;
             } else {
-                kembali.value = '0'; // Jika kembalian negatif, tampilkan '0.00'
+                kembali.value = '0' // jika kembalian negatif, tampilkan 0.00
+                btnBayar.disabled = true;
             }
-        });
+        })
+
     });
 </script>
 

@@ -103,7 +103,8 @@ class Mproduk extends Model
     public function getStok0()
     {
         $produk = new Mproduk();
-        $produk->select('tbl_produk.kode_produk, tbl_produk.id_produk, tbl_produk.nama_produk, tbl_produk.harga_beli, tbl_produk.harga_jual, tbl_produk.stok');
+        $produk->select('tbl_produk.kode_produk, tbl_produk.id_produk, tbl_produk.nama_produk, 
+        tbl_produk.harga_beli, tbl_produk.harga_jual, tbl_produk.stok');
         $produk->where('tbl_produk.stok = 0');
         return $produk->findAll();
         // $produk->select*from tbl_barang where stok=0;

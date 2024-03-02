@@ -51,9 +51,8 @@ $routes->get('/transaksi-penjualan','Penjualan::index',['filter'=>'otentifikasi'
 $routes->post('/transaksi-penjualan','Penjualan::simpanPenjualan',['filter'=>'otentifikasi']);
 $routes->get('/pembayaran','Penjualan::simpanPembayaran',['filter'=>'otentifikasi']);
 
-
 $routes->get('/laporan', 'Laporan::dataStok');
 $routes->get('/pdf/generate', 'PdfController::generate');
-$routes->get('/penjualan', 'Laporan::dataPenjualan');
-$routes->get('/pdf/generate-penjualan', 'PdfController::generatePenjualan');
+// $routes->get('/penjualan', 'Laporan::dataPenjualan');
+// $routes->get('/pdf/generate-penjualan', 'PdfController::generatePenjualan');
 
